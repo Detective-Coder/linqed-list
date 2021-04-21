@@ -19,6 +19,35 @@ namespace linq
             {
               Console.WriteLine($"{f}");
             }
-        }
+
+            // Which of the following numbers are multiples of 4 or 6
+            List<int> numbers = new List<int>()
+            {
+                15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            };
+
+            IEnumerable<int> fourSixMultiples = numbers.Where(number => number % 4 == 0 || number % 6 == 0);
+
+            foreach (int n in fourSixMultiples)
+            {
+              Console.WriteLine($"{n}");
+            }
+
+            // Order these student names alphabetically, in descending order (Z to A)
+            List<string> names = new List<string>()
+            {
+                "Heather", "James", "Xavier", "Michelle", "Brian", "Nina",
+                "Kathleen", "Sophia", "Amir", "Douglas", "Zarley", "Beatrice",
+                "Theodora", "William", "Svetlana", "Charisse", "Yolanda",
+                "Gregorio", "Jean-Paul", "Evangelina", "Viktor", "Jacqueline",
+                "Francisco", "Tre"
+            };
+
+            var descend = names.OrderByDescending(n => n);  
+            
+            foreach (string n in descend)
+            {
+              Console.WriteLine($"{n}");
+            }      }
     }
 }
