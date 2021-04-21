@@ -51,10 +51,6 @@ namespace linq
             }
 
             // // Build a collection of these numbers sorted in ascending order
-            // List<int> numbers = new List<int>()
-            // {
-            //     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
-            // };
 
             var ascendingNumbers = numbers.OrderBy(n => n);
 
@@ -62,7 +58,14 @@ namespace linq
             {
               Console.WriteLine($"{n}");
             }
-            
+
+            // Output how many numbers are in this list
+            // List<int> numbers = new List<int>()
+            // {
+            //     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            // };
+            Console.WriteLine();
+            Console.WriteLine("There are " + numbers.Count + " numbers in the numbers list.");
         }
     }
 }
