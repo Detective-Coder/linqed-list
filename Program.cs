@@ -48,6 +48,21 @@ namespace linq
             foreach (string n in descend)
             {
               Console.WriteLine($"{n}");
-            }      }
+            }
+
+            // // Build a collection of these numbers sorted in ascending order
+            // List<int> numbers = new List<int>()
+            // {
+            //     15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+            // };
+
+            var ascendingNumbers = numbers.OrderBy(n => n);
+
+            foreach (int n in ascendingNumbers)
+            {
+              Console.WriteLine($"{n}");
+            }
+            
+        }
     }
 }
